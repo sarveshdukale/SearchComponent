@@ -1,0 +1,56 @@
+html{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom right , rgb(29, 125, 203),rgb(134, 30, 230));
+}
+
+
+/* body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom right , rgb(29, 125, 203),rgb(134, 30, 230));
+} */
+
+#searchContainer{
+    margin-top: 100px;
+}
+
+#seracBarContainer{
+    height: 40px;
+    width: 500px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 20px;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 7px black;
+}
+
+#seracBarContainer:hover{
+    transform: scale(1.007);
+    
+}
+
+
+
+input{
+    height: 100%;
+    width: 90%;
+    border: none;
+    font-size: 20px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+
+input:focus{
+    outline: none;
+}
+
+#icon{
+    font-size: 2rem;
+    padding-left: 7px;
+}
