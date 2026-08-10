@@ -6,7 +6,7 @@ function SearchBar() {
   return (
       <>
           <div id="seracBarContainer">
-              <IoIosSearch />
+              <IoIosSearch id='icon'/>
               <input type="text" placeholder='Enter to Search...' />
           </div>
       </>
