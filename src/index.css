@@ -54,3 +54,31 @@ input:focus{
     font-size: 2rem;
     padding-left: 7px;
 }
+
+#searchResult{
+    width: 100%;
+    max-height: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    box-shadow: 0px 0px 8px black;
+    overflow-y: scroll;
+}
+
+#searchResult p{
+    font-size: 19px;
+    padding: 5px 2px;
+}
+
+#searchResult p:hover{
+    background-color: rgba(54, 93, 107, 0.897);
+}
+
+
+.user{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(197, 106, 106);
+}
