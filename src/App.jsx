@@ -4,7 +4,7 @@ import SearchBar from './components/SearchBar';
 import SearchResults from './components/searchResults';
 
 function App() {
-  const [search, setSearch] = useState(" ");
+  const [search, setSearch] = useState("");
   return (
     <>
       <div id="searchContainer">
