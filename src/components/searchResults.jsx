@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import SearchBar from './SearchBar';
+
 
 function SearchResults({search}) {
     const [loading, setLoading] = useState(true);
@@ -12,7 +12,7 @@ function SearchResults({search}) {
         
         async function getData() {
             try {
-                const response = await fetch("https://jsonplaceholder.typicode.com/users");
+                const response = await fetch("https://dummyjson.com/users?limit=500");
 
 
                 if (!response.ok) {
@@ -21,7 +21,7 @@ function SearchResults({search}) {
 
                 const data = await response.json();
 
-                setUsers(data);
+                setUsers(data.users);
 
             }
         
@@ -40,30 +40,26 @@ function SearchResults({search}) {
         user.username.toLowerCase().includes(search.toLowerCase())
     ))
 
+    if (filteredUser == "") {
+        return <h2>No user Found...</h2>
+    }
+
     if (error) {
     return <h2>{error}</h2>;
     }
     
     if (loading) {
     return <h2>Loading...</h2>;
-  }
+    }
     
-
+    
   return (
       <>
-          {loading?<h2>loading...</h2>:<div id="allUsers">
-              
-          </div>}
-        
-
-        
-          <div id="searchResult">{
+          {search == ""? "":<div id="searchResult">{
               filteredUser.map((user) => (
                   <p className="name" key={user.id}>{user.username}</p>
               ))}
-          </div>
-
-         
+          </div>}
       </>
   )
 }
